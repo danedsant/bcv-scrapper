@@ -11,11 +11,11 @@ async function chiguirearPrecioDolar(url) {
     await el.waitFor(); // espera a que el elemento esté disponible
     const srcTxt = await el.textContent(); // obtiene el texto del elemento
 
-    console.log(srcTxt);    // mostrar el valor de los dolitas en consola
+    console.log("Precio del Dolar: ",srcTxt,"Bs.");    // mostrar el valor de los dolitas en consola
     await browser.close();  // cierra el navegador
     return srcTxt;          // devuelve el valor del dólar actulizao
 }
 //Ejecuta la funcion con la URL del BCV pa obtener el valor del dolar 
 chiguirearPrecioDolar('https://www.bcv.org.ve/');
 
-module.exports = chiguirearPrecioDolar; // exporta la función para usarla en otros archivos
+module.exports = chiguirearPrecioDolar; // exporta la función para usarla en otro componente
